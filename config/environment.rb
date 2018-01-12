@@ -2,9 +2,11 @@ require 'bundler/setup'
 require 'hanami/setup'
 require 'hanami/model'
 require_relative '../lib/fake_cf_api'
+require_relative '../apps/api/application'
 require_relative '../apps/web/application'
 
 Hanami.configure do
+  mount Api::Application, at: '/api'
   mount Web::Application, at: '/'
 
   model do
