@@ -1,3 +1,5 @@
 get '/projects', to: 'projects#index'
 post '/projects', to: 'projects#create'
-post '/projects/:id/run_project', to: 'projects#run_project'
+post '/projects/:id/start_project', to: 'projects#start_project'
+post '/projects/:id/stop_project', to: 'projects#stop_project'
+get '/project_run/:id', to: 'project_run#show'

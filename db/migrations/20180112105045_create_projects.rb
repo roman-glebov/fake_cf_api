@@ -5,6 +5,7 @@ Hanami::Model.migration do
 
       column :name, String
       column :description, String
+      column :test_ids, 'integer[]', default: []
       column :created_at, DateTime, null: false
       column :updated_at, DateTime, null: false
     end

@@ -5,6 +5,7 @@ module Api::Controllers::Projects
     params do
       required(:name).filled
       optional(:description).filled
+      optional(:test_ids).filled
     end
 
     expose :project
