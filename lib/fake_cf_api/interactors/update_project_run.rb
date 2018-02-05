@@ -10,7 +10,10 @@ class UpdateProjectRun
   end
 
   def call(attributes)
-    @project_run = @repository.update(attributes['cf_project_run_id'], status: attributes['status'], active_tests: attributes['active_tests'])
+    @project_run = @repository.update(attributes['cf_project_run_id'],
+                                      status: attributes['status'],
+                                      completion: attributes['completion'],
+                                      active_tests: attributes['active_tests'])
   rescue StandardError => e
     error e.message
   end
